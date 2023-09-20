@@ -227,7 +227,7 @@ htmlOutput(titleContainsItAndBodyContainsQuo, ['title', 'body'], "7.27. HTML fai
 const bodyContainsSit = posts.filter(post => post.body.toLowerCase().includes(' sit ') && !post.body.toLowerCase().includes('sitto') && !post.body.toLowerCase().includes('quasit'));
 htmlOutput(bodyContainsSit, ['title', 'body'], "7.28. HTML faile sukurti ul elementą ir tokiu pačiu formatu, kaip ankstesnėje užduotyje, išvesti tik tuos masyvo narius, kurių 'body' turi žodį 'sit'. Jeigu žodis turi šį simbolių junginį, tačiau tai nėra pilna jo reikšmė (pvz. žodžiai 'sitto' ar 'quasit'), jie neturėtų būti atvaizduojami.");
 
-const titleContainsMoreThan3AAndBodyContainsLessThan7O = posts.filter(post => (post.title.match(/a/gi) || []).length > 3 && (post.body.match(/o/gi) || []).length < 7);
+const titleContainsMoreThan3AAndBodyContainsLessThan7O = posts.filter(post => (post.title.match(/a/gi)).length > 3 && (post.body.match(/o/gi)).length < 7);
 htmlOutput(titleContainsMoreThan3AAndBodyContainsLessThan7O, ['title', 'body'], "7.29. HTML faile sukurti ul elementą ir tokiu pačiu formatu, kaip ankstesnėje užduotyje, išvesti tik tuos masyvo narius, kurių pavadinimas turi daugiau nei 3 'a' raides, o 'body' turi mažiau nei 7 'o' raides.");
 
 const sortedPosts = [...posts].sort((a, b) => a.body.length - b.body.length);
